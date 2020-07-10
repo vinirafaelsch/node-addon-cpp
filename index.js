@@ -17,8 +17,10 @@ console.log("\tModelo Euclideano: " + euclideanModulo(10, 20));
 console.log("\tTranformações Lineares: " + mapLinear(5, 10, 15, 12, 2));
 
 console.log("\n\nFUNÇÕES EXECUTADAS NO C++");
-console.log(addon.euclideanModulo(10, 20));
-//console.log(addon.mapLinear(5, 10, 15, 12, 2));
+console.log("\tModelo Euclideano: " + addon.euclideanModulo(10, 20));
+console.log("\tTranformações Lineares: " + addon.mapLinear(5, 10, 15, 12, 2));
+
+
 
 
 

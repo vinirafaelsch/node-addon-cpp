@@ -22,7 +22,7 @@ void euclideanModulo (const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
   info.GetReturnValue().Set(result);
 }
-/*
+
 void mapLinear (const Nan::FunctionCallbackInfo<v8::Value>& info) {
   v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
 
@@ -47,14 +47,21 @@ void mapLinear (const Nan::FunctionCallbackInfo<v8::Value>& info) {
 
   info.GetReturnValue().Set(result);
 }
-*/
-void Init(v8::Local<v8::Object> exports) {
+
+void InitAll(v8::Local<v8::Object> exports) {
   v8::Local<v8::Context> context = exports->CreationContext();
+
   exports->Set(context,
                Nan::New("euclideanModulo").ToLocalChecked(),
                Nan::New<v8::FunctionTemplate>(euclideanModulo)
                    ->GetFunction(context)
                    .ToLocalChecked());
+
+  exports->Set(context,
+               Nan::New("mapLinear").ToLocalChecked(),
+               Nan::New<v8::FunctionTemplate>(mapLinear)
+                   ->GetFunction(context)
+                   .ToLocalChecked());
 }
 
-NODE_MODULE(addon, Init)
+NODE_MODULE(addon, InitAll)

@@ -309,7 +309,7 @@ endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
 cmd_regen_makefile = cd $(srcdir); /home/vinirafaelsch/.nvm/versions/node/v12.16.3/lib/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/home/vinirafaelsch/.cache/node-gyp/12.16.3" "-Dnode_gyp_dir=/home/vinirafaelsch/.nvm/versions/node/v12.16.3/lib/node_modules/node-gyp" "-Dnode_lib_file=/home/vinirafaelsch/.cache/node-gyp/12.16.3/<(target_arch)/node.lib" "-Dmodule_root_dir=/home/vinirafaelsch/Desktop/node-addon-cpp" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/home/vinirafaelsch/Desktop/node-addon-cpp/build/config.gypi -I/home/vinirafaelsch/.nvm/versions/node/v12.16.3/lib/node_modules/node-gyp/addon.gypi -I/home/vinirafaelsch/.cache/node-gyp/12.16.3/include/node/common.gypi "--toplevel-dir=." binding.gyp
-Makefile: $(srcdir)/../../.cache/node-gyp/12.16.3/include/node/common.gypi $(srcdir)/binding.gyp $(srcdir)/../../.nvm/versions/node/v12.16.3/lib/node_modules/node-gyp/addon.gypi $(srcdir)/build/config.gypi
+Makefile: $(srcdir)/../../.nvm/versions/node/v12.16.3/lib/node_modules/node-gyp/addon.gypi $(srcdir)/build/config.gypi $(srcdir)/binding.gyp $(srcdir)/../../.cache/node-gyp/12.16.3/include/node/common.gypi
 	$(call do_cmd,regen_makefile)
 
 # "all" is a concatenation of the "all" targets from all the included
