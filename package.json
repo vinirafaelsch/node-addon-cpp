@@ -1,0 +1,19 @@
+{
+  "name": "addon-cpp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinirafaelsch/node-addon-cpp.git"
+  },
+  "author": "vinirafaelsch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinirafaelsch/node-addon-cpp/issues"
+  },
+  "homepage": "https://github.com/vinirafaelsch/node-addon-cpp#readme"
+}
