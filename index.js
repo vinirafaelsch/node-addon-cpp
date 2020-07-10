@@ -25,7 +25,7 @@ console.log("\tTranformações Lineares: " + mapLinear(500, 1000, 1500, 1200, 20
 end = Date.now();
 linJS = (end - begin) + "ms";
 
-console.log("\n\nFUNÇÕES EXECUTADAS NO C++");
+console.log("\nFUNÇÕES EXECUTADAS NO C++");
 
 begin = Date.now();
 console.log("\tModelo Euclideano: " + addon.euclideanModulo(10000, 15));
@@ -37,16 +37,24 @@ console.log("\tTranformações Lineares: " + addon.mapLinear(500, 1000, 1500, 12
 end = Date.now();
 linCPP = (end - begin)+ "ms";
 
-console.log("\nTEMPO DE PROCESSAMENTO DE CADA FUNÇÃO\n");
+console.log("\nTEMPO DE PROCESSAMENTO DE CADA FUNÇÃO");
 
-console.log("Modelo Euclideano - JS: " + eucJS);
-console.log("Modelo Euclideano - C++: " + eucCPP);
+console.log("\tModelo Euclideano - JS: " + eucJS);
+console.log("\tModelo Euclideano - C++: " + eucCPP);
 
-console.log("Transformação Linear - JS: " + linJS);
-console.log("Transformação Linear - C++: " + linCPP);
+console.log("\tTransformação Linear - JS: " + linJS);
+console.log("\tTransformação Linear - C++: " + linCPP);
 
-
-
-
-
-
+if (eucJS == eucCPP)
+	console.log("Na função Modelo Euclideano ambas linguagens tiveram o mesmo desempenho.");
+else if (eucJS > eucCPP) 
+	console.log("Na função Modelo Euclideano a linguagem C++ teve melhor desempenho.");
+else
+	console.log("Na função Modelo Euclideano a linguagem JS teve melhor desempenho");
+	
+if (linJS == linCPP)
+	console.log("Na função Transformação Linear ambas linguagens tiveram o mesmo desempenho.");
+else if (linJS > linCPP) 
+	console.log("Na função Transformação Linear a linguagem C++ teve melhor desempenho.");
+else
+	console.log("Na função Transformação Linear a linguagem JS teve melhor desempenho");
